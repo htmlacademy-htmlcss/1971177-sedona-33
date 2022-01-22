@@ -1,0 +1,374 @@
+/*normal font*/
+@font-face {
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"),
+  url("../fonts/ptsans-400.woff2") format("woff2");
+}
+
+/*bold font*/
+@font-face {
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans"),
+  url("../fonts/ptsans-700.woff2") format("woff2");
+
+}
+
+html {
+  width: 1280px;
+  margin: auto;
+  background-color: #F2F2F2;
+}
+
+body {
+  width: 1200px;
+  margin: auto;
+  background-color: white;
+
+}
+
+
+/* Navigation and introduce section */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 66px;
+}
+
+.menu-items__menu-item {
+  font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-items {
+  display: flex;
+  padding-bottom: initial;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu-items__right-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.menu-items__right-menu,
+.menu-items__left-menu {
+  display: flex;
+  justify-self: flex-end;
+  flex-wrap: wrap;
+
+}
+
+.menu-items__left-menu:nth-child(2) {
+  margin-left: 13px;
+}
+
+.menu-items__left-menu > li {
+  margin-left: 34px;
+}
+
+.menu-items__right-menu > li:nth-child(2) {
+  margin-left: 23px;
+}
+
+.menu-items__right-menu > li:nth-child(3) {
+  margin-left: 32px;
+}
+
+
+.introduce {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(auto, auto);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.hidden {
+  display: none;
+
+}
+
+.logo-image {
+  margin-left: 70px;
+  width: 139px;
+  position: relative;
+
+}
+
+.main-image {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/index-background.png");
+  background-repeat: no-repeat;
+  margin-top: -5px;
+  order: -1;
+  height: 485px;
+}
+
+.divider {
+  margin-top: 26px;
+
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: 2 / 1 / 3 / 2;
+
+}
+
+h2 {
+  font-family: PT Sans, Arial, serif;
+  width: 720px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 62px;
+
+}
+
+.slogan > p,
+.hotel-search > p{
+  font-family: PT Sans, Arial, serif;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+  color: #333333;
+  margin-top: 7px;
+}
+
+.welcome-image {
+  margin-top: 50px;
+
+}
+
+.menu-items__right-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #756257;
+  border-radius: 4px;
+  font-family: PT Sans, Arial, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 160px;
+  height: 37px;
+  margin-top: -7px;
+margin-right: 70px;
+
+
+}
+
+.menu-items__menu-item:hover {
+  border-bottom: 2px solid #756257;
+  padding-bottom: 16px;
+}
+
+/* Features styles */
+.features {
+  margin-top: 60px;
+}
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.features-list__feature-summary {
+  background-color: #83B3D3;
+}
+
+.features-list__feature-summary,
+.features-list__feature-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 384px;
+
+}
+
+.features-list__feature-image {
+  width: 800px;
+  height: 384px;
+
+}
+
+.features-summary__description {
+  width: 220px;
+  font-family: PT Sans, Arial, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+.uppercase {
+  text-transform: uppercase;
+
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+}
+
+.features-item__description {
+
+  width: 250px;
+  font-family: PT Sans, Arial, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+  margin-top: -6px;
+
+}
+
+.features-item__title {
+  font-family: PT Sans, Arial, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 26px;
+}
+
+
+
+.features > ul:nth-child(odd) > .features-list__feature-item:nth-child(odd),
+.features > ul:nth-child(even) > .features-list__feature-item:nth-child(odd) {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.features > ul:nth-child(even) > .features-list__feature-item:nth-child(even) {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.revers-title {
+  color: black;
+}
+
+.features-list__description {
+  font-family: PT Sans, Arial, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #333333;
+}
+
+
+.hotel-search,
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 413px;
+  margin-top: 19px;
+}
+
+.hotel-search > h2 {
+margin-top: 91px
+}
+
+.subscribe__input {
+  margin-right: -5px;
+}
+
+.subscribe__background {
+  background-image: url("../img/subscribe-bg.png");
+}
+.hotel-search > p,
+.hotel-search__button {
+  width: 575px;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 120px;
+}
+
+.footer__social-wrapper {
+  grid-area: 1 / 1 / 2 / 2;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-wrapper > svg {
+  margin-right: 30px;
+}
+
+.footer__phone {
+  grid-area: 1 / 2 / 2 / 3;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer__htmlacademy-logo {
+  grid-area: 1 / 3 / 2 / 4;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
