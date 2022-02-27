@@ -340,6 +340,21 @@ h2 {
   background-color: #C6CFBC;
 
 }
+.features-list__feature-item > p {
+  color: #333333;
+}
+
+.features-summary__number {
+  font-family: PT Sans, Arial, serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+
 
 .features-summary__description {
   max-width: 220px;
@@ -350,11 +365,12 @@ h2 {
   line-height: 21px;
   text-align: center;
   color: #FFFFFF;
-  margin-top: 10px;
+  margin: 0;
+  padding-bottom: 15px;
 }
 
 .features-list__feature-icon {
-  margin-top: 15px;
+  padding-bottom: 25px;
 }
 
 .uppercase {
@@ -366,8 +382,7 @@ h2 {
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
-  margin-top: 35px;
-  margin-bottom: 15px;
+  padding-top: 30px;
 
 }
 
@@ -378,7 +393,6 @@ h2 {
   line-height: 21px;
   text-align: center;
   color: #333333;
-  margin-top: 0;
 }
 
 .features-item__title {
@@ -390,7 +404,8 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-  margin-top: 18px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 
 
@@ -405,8 +420,8 @@ h2 {
 
 .revers-title {
   color: black;
-  margin-top: 20px;
   max-width: 150px;
+  padding-top: 15px;
 }
 
 .features-list__description {
@@ -418,7 +433,12 @@ h2 {
   text-align: center;
   max-width: 235px;
   color: #333333;
-  margin-top: 15px;
+  padding-bottom: 27px;
+  margin-bottom: 0;
+}
+
+.features-list__feature-item > p {
+  margin: 0;
 }
 
 
@@ -496,6 +516,7 @@ h2 {
   margin-bottom: 50px;
   max-width: 720px;
   color: #333333;
+
 }
 
 .subscribe__paragraph {
@@ -717,10 +738,6 @@ footer {
 }
 
 .footer__htmlacademy-logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
   margin-right: 72px;
   margin-left: auto;
 
@@ -763,9 +780,8 @@ footer {
   background-image: url("../src/images/catalog-background.png");
   background-size: cover;
   background-color: #8BB2CF;
-  background-overflow: visible;
   margin-top: -5px;
-  padding: 35px 70px 63px 71px;
+  padding: 40px 71px 57px 68px;
 }
 
 .search-filters__title {
@@ -782,7 +798,7 @@ footer {
 }
 
 .submenu {
-  margin-top: -5px;
+  margin-top: -10px;
 }
 
 .search-filters__title > a > svg {
@@ -859,7 +875,7 @@ footer {
   line-height: 26px;
   color: #FFFFFF;
   margin-bottom: 25px;
-  padding-left: 5px;
+  padding-left: 4px;
 }
 
 /* Hide basic checkboxes and radio -- get from https://habr.com/ru/post/489476/*/
@@ -877,7 +893,7 @@ input[type="radio"]:checked + label,
 input[type="radio"]:not(:checked) + label {
   display: inline-block;
   position: relative;
-  padding-left: 45px;
+  padding-left: 40px;
   line-height: 20px;
   cursor: pointer;
 }
@@ -987,6 +1003,9 @@ input[type="radio"]:hover {
   background-color: #FF5757;
 }
 
+.search-filters__items {
+  margin-left: 3px;
+}
 .search-filters__items > li {
   margin-bottom: 13px;
   font-family: PT Sans, Arial, serif;
@@ -1000,7 +1019,7 @@ input[type="radio"]:hover {
   display: flex;
   flex-direction: row;
   justify-self: flex-end;
-  padding-left: 140px;
+  padding-left: 143px;
 }
 
 .search-filters__price-buttons {
@@ -1010,8 +1029,9 @@ input[type="radio"]:hover {
 
 input[type=range] {
   -webkit-appearance: none;
-  margin: 32px 0;
+  margin-top: 29px;
   width: 290px;
+  height: 4px;
 }
 
 input[type=range]:focus {
@@ -1019,7 +1039,8 @@ input[type=range]:focus {
 
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type=range]::-webkit-slider-runnable-track
+{
   width: 100%;
   height: 4px;
   cursor: pointer;
@@ -1038,6 +1059,16 @@ input[type=range]::-webkit-slider-thumb,
   margin-top: -10px;
 }
 
+input[type=range]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+
 input[type=range]::-webkit-slider-thumb:active {
   border: 2px solid #83B3D3;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
@@ -1045,7 +1076,8 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .thumb-position {
-  margin-top: -45px;
+  position: absolute;
+  top: 375px;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
@@ -1069,6 +1101,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   border: 3px solid transparent;
   cursor: pointer;
   padding: 10px 0;
+  margin-top: 3px;
 }
 
 .search-filters__accept-button:hover:not(.favorite-button__active),
@@ -1294,13 +1327,14 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   line-height: 23px;
   color: #FFFFFF;
   opacity: 0.3;
-  margin-left: -35px;
+  margin-left: -36px;
   margin-right: 10px;
 }
 
 .search-filters__fieldset--first-input {
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
+  margin-top: 5px;
 }
 
 .search-filters__fieldset--first-input:hover {
@@ -1357,7 +1391,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 
 .price-input {
-  width: 143px;
+  width: 145px;
   height: 48px;
   background: transparent;
   border: 2px solid #FFFFFF;
@@ -1367,6 +1401,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   line-height: 23px;
   color: #FFFFFF;
   padding-left: 19px;
+  padding-top: 6px;
 }
 
 /* Search results */
@@ -1375,7 +1410,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   display: grid;
   grid-template-columns: minmax(300px, 400px);
   grid-template-rows: auto;
-  padding: 23px 72px 50px 71px;
+  padding: 34px 72px 50px 71px;
 
 
 }
@@ -1445,6 +1480,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+  padding-right: 73px;
+  padding-top: 5px;
 }
 
 
@@ -1467,7 +1504,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   line-height: 23px;
   max-width: 160px;
   padding-left: 15px;
-  margin-left: 51px;
+  margin-left: 47px;
 }
 
 
@@ -1487,7 +1524,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   flex-wrap: wrap;
   max-width: 339px;
   margin-right: 20px;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .hotel-name {
@@ -1500,9 +1537,9 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   font-size: 24px;
   line-height: 31px;
   color: #000000;
-  margin-top: 16px;
+  margin-top: 13px;
   margin-bottom: 0;
-  padding-bottom: 16px;
+  padding-bottom: 23px;
 }
 
 .stars-wrapper {
@@ -1555,17 +1592,15 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .search-navigation {
   display: flex;
   justify-content: center;
-  padding: 30px 0 0 0;
   border: 1px solid #E6E6E6;
-  min-height: 100px;
-
+  padding: 30px 0;
 }
 
 .search-navigation__links {
   display: flex;
   justify-content: flex-start;
   margin-left: 70px;
-  padding: 20px 0 0 3px;
+  padding: 27px 0 0 4px;
 }
 
 .modal {
